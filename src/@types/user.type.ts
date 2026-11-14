@@ -4,5 +4,5 @@ export interface CreateUser {
    gender: "MALE" | "FEMALE";
    email?: string;
    contact: string;
-   password: string
+   password: string;
 }
