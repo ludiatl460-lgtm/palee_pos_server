@@ -18,6 +18,13 @@ model User {
   lastname String? @db.VarChar(100)
   gender   Gender
   email    String? @unique @db.VarChar(150)
-  contact  String  @unique @db.VarChar(20)
+  contact  String  @unique @db.VarChar(11)
   password String  @db.VarChar(255)
+  @@map("user")
+}
+
+model Category {
+  categoryId  Int @id @default(autoincrement())
+  categoryName   String  @db.VarChar(50) @unique
+  @@map("category")
 }
